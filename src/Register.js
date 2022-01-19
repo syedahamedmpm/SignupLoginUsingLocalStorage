@@ -41,7 +41,22 @@ handleSubmit=(e)=>{
     })
     console.log(validationErrors)
   }
-  
+  if(!email){
+    errors['email']='Please Enter Email'
+    console.log(errors)
+    this.setState({
+      validationErrors:errors
+    })
+    console.log(validationErrors)
+  }
+  if(!password){
+    errors['password']='Please Enter Password'
+    console.log(errors)
+    this.setState({
+      validationErrors:errors
+    })
+    console.log(validationErrors)
+  }
   else if(password.search(specialdec)){
     console.log(password)
     errors['password']='Please Enter One Upper Case,Lower Case,One Number,One Special Character'
